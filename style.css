@@ -121,9 +121,10 @@ h1,h2,h3,h4,h5,h6{line-height: 1;}
      .about-me-img{width: 100%;}
      .about-me-contents,.edu,.left,.right{width: 100%;}
      .edu{padding-left: 0;}
-     .section,.container{padding: 1.5rem;}
+     .section,.container{padding: 3.5rem 1.5rem;}
      .left ul,.row,.right ul{height: unset;}
      li{margin-bottom: 2.5rem;}.section__label{margin-bottom: 2.3rem;}
+     .about-me-contents{padding: 0; margin-top: 20px;}
     }
     @media (max-width:480px){
         html{font-size: 40%;}
