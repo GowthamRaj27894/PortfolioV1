@@ -5,11 +5,12 @@
     list-style-type: none;
 }
 html{
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     font-size: 62.5%;
 }
 body{
     line-height: 1.6;
+    transition: all 0.5 ease-in;
     color: #555555;
     font-family: 'Lato', sans-serif;
     background: #EB3349;  /* fallback for old browsers */
@@ -26,6 +27,7 @@ svg{
 }
 h1,h2,h3,h4,h5,h6{line-height: 1;}
 .icons{font-size: 3rem; color: #ffffff;}
+.fa-arrow-circle-up.icons{font-size: 4rem;}
 .container{
     max-width: 114rem;
     margin: 0 auto;
@@ -56,12 +58,25 @@ h1,h2,h3,h4,h5,h6{line-height: 1;}
     padding: 6rem;
     background: #ffffff;
 }
+
 .section:nth-of-type(odd){background: #F6F6F6;}
 
 /* section-1 */
 .section__label{
     font-size: 3rem;
     margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+.section__label::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5rem;
+    height: .1rem;
+    border-bottom: .5rem solid #F45C43;
+    /* background: #F45C43; */
 }
 .section-1__about-me{
     display: flex;
@@ -104,8 +119,8 @@ h1,h2,h3,h4,h5,h6{line-height: 1;}
  .education__couse{font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem;}
  .education__university{font-size: 1.8rem;}
  .edu{width: 33.33%;padding: 2rem; padding-top: 0; padding-bottom: 0;}
- .edu:nth-of-type(1){padding-left: 0;}
- .edu:nth-of-type(3){padding-right: 0;}
+ .edu:nth-of-type(1){padding-left: 0; border-right: .1px solid #d1d1d1;}
+ .edu:nth-of-type(3){padding-right: 0; border-left: .1px solid #d1d1d1;}
 
  /* section-5 */
  .row,.left ul,.right ul{    display: flex;flex-wrap: wrap;
@@ -116,6 +131,12 @@ h1,h2,h3,h4,h5,h6{line-height: 1;}
  .hobby-label{display: block; margin-bottom: 1.5rem; color: #F45C43;}
  .declaration{font-size: 2rem;}
 
+ .back-to-top{
+     position: fixed;
+     bottom: 1rem;
+     right: 1rem;
+ }
+
  @media (max-width:767px){
      html{font-size:50%}
      .about-me-img{width: 100%;}
@@ -125,6 +146,7 @@ h1,h2,h3,h4,h5,h6{line-height: 1;}
      .left ul,.row,.right ul{height: unset;}
      li{margin-bottom: 2.5rem;}.section__label{margin-bottom: 2.3rem;}
      .about-me-contents{padding: 0; margin-top: 20px;}
+     /* .icons{color: #EB3349;} */
     }
     @media (max-width:480px){
         html{font-size: 40%;}
